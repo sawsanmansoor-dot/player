@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate Video Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>🎬 Ultimate Player</h1>
+      <div class="theme-buttons">
+        <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="gold">Gold</button>
+        <button data-color="purple">Purple</button>
+      </div>
+    </header>
+
+    <div class="input-row">
+      <input type="text" id="videoInput" placeholder="Paste video / m3u8 / magnet link..." />
+      <button id="addBtn">➕ Add</button>
+      <button id="playBtn">▶ Play</button>
+      <button id="uploadBtn">📂 File</button>
+    </div>
+
+    <video id="player" controls></video>
+
+    <div class="controls">
+      <button class="speed" data-speed="0.5">0.5×</button>
+      <button class="speed" data-speed="1">1×</button>
+      <button class="speed" data-speed="1.5">1.5×</button>
+      <button class="speed" data-speed="2">2×</button>
+      <button id="loopBtn">🔁 Loop</button>
+      <button id="shuffleBtn">🔀 Shuffle</button>
+      <button id="nextBtn">⏭ Next</button>
+      <button id="muteBtn">🔇 Mute</button>
+      <button id="pipBtn">🪟 PiP</button>
+      <button id="fsBtn">⛶ Fullscreen</button>
+      <button id="nightBtn">🌙 Mode</button>
+      <button id="clearBtn">🗑 Clear All</button>
+    </div>
+
+    <h2>My Playlist</h2>
+    <div id="playlist" class="playlist"></div>
+
+    <div id="status"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
